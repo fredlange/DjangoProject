@@ -3,29 +3,11 @@
 {% block content %}
 
 <div class="pull-right">
-  <form name="form", action="{% url "personal.views.sendmail" %}", method="post">
+  <form role="form", action="", method="POST">
     {% csrf_token %}
-    <div class="form-group">
-      <label for="exampleInputEmail1">Ditt namn</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <small id="emailHelp" class="form-text text-muted">Ditt namn är fint...</small>
-    </div>
+    {{ form.as_p }}
 
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-
-    <div class="form-group">
-      <label for="exampleInputEmail1">Target</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <small id="emailHelp" class="form-text text-muted">Who do you want to kill?</small>
-    </div>
-
-    <button style = "border:0px; background-color:#4285F4; margin-top:8%;
-                  height:35px; width:80%;margin-left:19%;" type = "submit"
-                  value = "Skicka" >
+    <button type = "submit" value = "Skicka" >
                   <strong>Skicka</strong>
     </button>
   </form>

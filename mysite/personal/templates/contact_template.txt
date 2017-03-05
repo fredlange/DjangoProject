@@ -1,0 +1,11 @@
+New email from website visitor
+
+
+Name
+{{ contact_name }}
+
+Email
+{{ contact_email }}
+
+Message:
+{{ content }}
